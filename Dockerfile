@@ -19,7 +19,6 @@ RUN apt-get update && \
 
 
 ADD collectd.conf ${basedir}/etc/collectd.conf
-#ADD network.conf ${basedir}/etc/collectd.d/network.conf
 ADD collectd.d ${basedir}/etc/collectd.d
 ADD entrypoint.sh /collectd_entrypoint.sh
 RUN chmod a+x /collectd_entrypoint.sh
